@@ -44,3 +44,7 @@ npm run dev
 npm run build
 ```
  
+## Run
+```powershell
+npm run dev
+```

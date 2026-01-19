@@ -13,7 +13,7 @@ export default {
         lato: ["Lato", "sans-serif"], // Anton font
       },
       colors: {
-        primary: "#00a8cb", // Main theme color
+        primary: "#FC710A", // Main theme color
         "primary-dark": "#007a99", // Darker version of the primary color for hover effects
         secondary: {
           100: "#E2E2D5", // Lighter shade for secondary elements

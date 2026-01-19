@@ -11,7 +11,6 @@ import Service from "./pages/Service";
 import Creators from "./pages/Creators";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
-import Chatbot from "./components/Chatbot";  // Import Chatbot Component
 
 const App = () => {
   useEffect(() => {
@@ -38,9 +37,6 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-
-      {/* Add the Chatbot component here */}
-      <Chatbot />  {/* This will appear globally on every page */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import {
   FaUser, // Added FaUser for Creators
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/logo_for_dark.png"; // Import your logo here
+import logo from "../../assets/logo/artha.jpg"; // Import your logo here
 
 const FooterLinks = [
   { title: "About", link: "/#about", icon: <FaHome /> },

@@ -14,10 +14,10 @@ import Team from '../components/OurTeam/Team';
      <div>
       <Hero />
       <Services />
-      <Testimonial />
-      <BrandsLogo/>
+      {/* <BrandsLogo/> */}
       <Team/>
-      <WorkComp />
+      <Testimonial />
+      {/* <WorkComp /> */}
      </div>
    )
  }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
-import DarkLogo from "../../assets/logo/logo_for_light.png"; // Always use DarkLogo
+import DarkLogo from "../../assets/logo/artha.jpg"; // Always use DarkLogo
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
