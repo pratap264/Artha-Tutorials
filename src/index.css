@@ -88,3 +88,12 @@ html {
 .swiper-button-next {
   right: 15px; /* Move closer to the carousel */
 }
+
+@keyframes slowBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-slow-blink {
+  animation: slowBlink 2s ease-in-out infinite;
+}

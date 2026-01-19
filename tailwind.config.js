@@ -19,6 +19,7 @@ export default {
           100: "#E2E2D5", // Lighter shade for secondary elements
           200: "#888883", // Darker shade for secondary elements
         },
+        artha: "#0D768C", // Artha color
         dark: "#111111", // Dark mode background
         light: "#FFFFFF", // Light mode background
         accent: "#F97316", // Accent color for buttons or highlights

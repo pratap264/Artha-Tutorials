@@ -1,177 +1,113 @@
 import React, { useState, useEffect } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
-import DarkLogo from "../../assets/logo/artha.jpg"; // Always use DarkLogo
+import DarkLogo from "../../assets/logo/artha.jpg";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => setShowMenu(!showMenu);
-
-  // Track the scroll position to change navbar appearance when scrolling
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowMenu(false);
+  };
+
   return (
-    <div
-      className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black bg-opacity-70 shadow-lg" : "bg-transparent"
+    <header
+    id="top"
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-white"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between md:space-y-2">
+      {/* Accent line */}
+      <div className="h-[2px] w-full bg-gradient-to-r from-primary via-artha to-primary" />
+
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-6">
-          <div className="logo cursor-pointer">
-            <img src={DarkLogo} alt="Logo" className="h-12 md:h-14" />
+        <button className="flex items-center">
+          <div className="h-16 md:h-20 flex items-center">
+            <img src={DarkLogo} alt="Logo" className="h-full w-auto object-contain" />
           </div>
-        </div>
+        </button>
 
-        {/* Right Section: Desktop Menu */}
-        <div className="flex items-center gap-8 font-buntu font-bold">
-          <nav className="hidden md:flex items-center space-x-8">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-black text-xl font-semibold hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-10 font-semibold text-[19px]">
+          {[
+            { label: "Courses", id: "courses" },
+            { label: "About Us", id: "about" },
+            { label: "Reviews", id: "reviews" },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="relative text-dark/80 hover:text-primary transition
+              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+              after:bg-primary after:w-0 hover:after:w-full after:transition-all"
             >
-              Home
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `text-black text-xl font-semibold hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
-            >
-              Courses
-            </NavLink>
-            <NavLink
-              to="/creators"
-              className={({ isActive }) =>
-                `text-black text-xl font-semibold hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
-            >
-              Results
-            </NavLink>
-            <NavLink
-              to="/career"
-              className={({ isActive }) =>
-                `text-black text-xl font-semibold hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `text-black text-xl font-semibold hover:text-primary transition-colors ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
-            >
-              Contact
-            </NavLink>
-          </nav>
+              {item.label}
+            </button>
+          ))}
 
-          {/* Mobile Hamburger Menu */}
-          <div className="md:hidden text-black">
-            {showMenu ? (
-              <RxCross2
-                size={30}
-                className="absolute top-4 right-4 cursor-pointer"
-                onClick={toggleMenu}
-              />
-            ) : (
-              <HiMenuAlt3
-                size={30}
-                className="cursor-pointer"
-                onClick={toggleMenu}
-              />
-            )}
-          </div>
+          {/* CTA */}
+          <button
+            onClick={() => scrollToSection("courses")}
+            className="bg-primary text-white px-6 py-2 rounded-full 
+            font-semibold text-sm
+            shadow-[0_8px_20px_rgba(252,113,10,0.35)]
+            hover:shadow-[0_10px_28px_rgba(252,113,10,0.45)]
+            hover:-translate-y-[1px]
+            transition-all duration-300"
+          >
+            Enroll Now
+          </button>
+        </nav>
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden text-black z-50">
+          {showMenu ? (
+            <RxCross2 size={32} onClick={() => setShowMenu(false)} />
+          ) : (
+            <HiMenuAlt3 size={32} onClick={() => setShowMenu(true)} />
+          )}
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-2/3 bg-black bg-opacity-90 text-white transition-transform transform ${
+        className={`md:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-xl transition-transform duration-300 ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col space-y-8 mt-16 px-6">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-xl font-semibold ${isActive ? "text-primary" : ""}`
-              }
-              onClick={() => setShowMenu(false)}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `text-xl font-semibold ${isActive ? "text-primary" : ""}`
-              }
-              onClick={() => setShowMenu(false)}
-            >
-              Courses
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/creators"
-              className={({ isActive }) =>
-                `text-xl font-semibold ${isActive ? "text-primary" : ""}`
-              }
-              onClick={() => setShowMenu(false)}
-            >
-              Results
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/career"
-              className={({ isActive }) =>
-                `text-xl font-semibold ${isActive ? "text-primary" : ""}`
-              }
-              onClick={() => setShowMenu(false)}
-            >
-              About Us
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `text-xl font-semibold ${isActive ? "text-primary" : ""}`
-              }
-              onClick={() => setShowMenu(false)}
-            >
-              Contact
-            </NavLink>
-          </li>
+        <ul className="flex flex-col gap-8 mt-28 px-6 text-xl font-semibold">
+          <button onClick={() => scrollToSection("courses")} className="text-left hover:text-primary">
+            Courses
+          </button>
+          <button onClick={() => scrollToSection("about")} className="text-left hover:text-primary">
+            About Us
+          </button>
+          <button onClick={() => scrollToSection("reviews")} className="text-left hover:text-primary">
+            Reviews
+          </button>
+
+          <button
+            onClick={() => scrollToSection("courses")}
+            className="bg-primary text-white py-3 rounded-full"
+          >
+            Enroll Now
+          </button>
         </ul>
       </div>
-    </div>
+    </header>
   );
 };
 
 export default Navbar;
-

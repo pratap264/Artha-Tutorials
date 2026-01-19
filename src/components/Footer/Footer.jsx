@@ -1,87 +1,118 @@
 import {
   FaInstagram,
   FaLinkedin,
-  FaHome,
-  FaBriefcase,
-  FaPhone,
-  FaUserTie,
-  FaUser, // Added FaUser for Creators
+  FaPhoneAlt,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/artha.jpg"; // Import your logo here
-
-const FooterLinks = [
-  { title: "About", link: "/#about", icon: <FaHome /> },
-  { title: "Services", link: "/services", icon: <FaBriefcase /> },
-  { title: "Creators", link: "/creators", icon: <FaUser /> }, // Moved Creators after Services
-  { title: "Contact", link: "/contact", icon: <FaPhone /> },
-  { title: "Career", link: "/career", icon: <FaUserTie /> },
-];
+import logo from "../../assets/logo/artha.jpg";
 
 const Footer = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="bg-dark text-white font-lato">
-      <section className="container py-10 relative">
-        {/* Footer Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 items-center">
-          {/* Company Section */}
-          <div className="flex flex-col items-center md:items-start mb-8">
-            <img
-              src={logo} // Logo
-              alt="Logo"
-              className="w-48 mb-4"
-            />
-            <p className="text-lg font-semibold text-gray-400 mb-4 uppercase hover:text-primary text-center md:text-left">
-              IMPACTFUL DESIGN THAT <br /> DEFINES YOUR PRESENCE
+    <footer className="bg-white text-gray-800 font-lato border-t">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Brand */}
+          <div className="space-y-3">
+            <img src={logo} alt="Artha Tutorials" className="w-40" />
+
+            {/* Tagline */}
+            <p className="text-bold text-gray-500 font-medium">
+              Guiding PUC Students Towards Academic Excellence
             </p>
 
-            {/* Social Media Icons */}
-            <div className="flex items-center gap-6 mt-6 justify-center md:justify-start text-white">
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Artha Tutorials is a trusted PUC coaching institute committed to
+              academic excellence, personal attention, and consistent results
+              for PUC 1 & 2 students.
+            </p>
+
+            {/* Social */}
+            <div className="flex gap-4 pt-2">
               <a
-                href="https://www.instagram.com/garageadvertisements"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                className="p-3 rounded-full bg-primary/10 text-primary
+      hover:bg-primary hover:text-white transition"
               >
-                <FaInstagram className="text-3xl hover:text-primary duration-300 text-white" />
+                <FaInstagram />
               </a>
+
               <a
-                href="https://www.linkedin.com/company/garageadvertisements/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                className="p-3 rounded-full bg-primary/10 text-primary
+      hover:bg-primary hover:text-white transition"
               >
-                <FaLinkedin className="text-3xl hover:text-primary duration-300 text-white" />
+                <FaLinkedin />
               </a>
             </div>
           </div>
 
-          {/* Links Section - Move to right */}
-          <div className="flex flex-col items-center md:items-end space-y-6 md:space-y-0 md:ml-auto">
-            <ul className="flex flex-col sm:flex-row gap-6 md:gap-16 justify-center sm:justify-end">
-              {FooterLinks.map((link) => (
-                <li
-                  key={link.title}
-                  className="flex flex-col items-center text-gray-400 hover:text-primary transition duration-300"
-                >
-                  <a href={link.link} className="flex flex-col items-center">
-                    <span className="text-white text-3xl mb-2">{link.icon}</span> {/* Set icon to white */}
-                    <span className="text-lg font-medium">{link.title}</span>
-                  </a>
-                </li>
-              ))}
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              Quick Links
+            </h3>
+            <ul className="space-y-3 text-gray-600">
+              <li>
+                <a href="#top" className="hover:text-primary">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#courses" className="hover:text-primary">
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-primary">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#faculty" className="hover:text-primary">
+                  Faculty
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" className="hover:text-primary">
+                  Reviews
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              Contact Us
+            </h3>
+
+            <ul className="space-y-4 text-gray-600 text-sm">
+              <li className="flex items-start gap-3">
+                <FaPhoneAlt className="text-primary mt-1" />
+                <span>+91 9XXXXXXXXX</span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-primary mt-1" />
+                <span>
+                  4th Main Road, Malleshwaram
+                  <br />
+                  Pincode: 560003
+                  <br />
+                  Bengaluru, Karnataka, India
+                </span>
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* Copyright Section */}
-        <div className="text-center py-6 border-t border-gray-600 mt-6">
-          <p className="text-sm text-gray-400">
-            Copyright © 2025 Garage Advertisements. All Rights Reserved.
-          </p>
+        {/* Bottom */}
+        <div className="border-t mt-12 pt-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Artha Tutorials. All rights reserved.
         </div>
-      </section>
-    </div>
+      </div>
+    </footer>
   );
 };
 

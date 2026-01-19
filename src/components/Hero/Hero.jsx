@@ -1,102 +1,73 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import studentImage from "../../assets/website/il-2-ed.png";
-import heroBackground from "../../assets/website/bg-3.jpg";
 
 const Hero = () => {
-  const navigate = useNavigate();
-
-  const handleLearnMoreClick = () => {
-    navigate("/services");
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div
-      className="duration-300"
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        minHeight: "100vh",
-      }}
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-[#0D768C]"
     >
-      <div className="container min-h-[100vh] flex items-center justify-center sm:mt-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
-          {/* Image section */}
-          <div data-aos="zoom-in" className="order-1 sm:order-2 relative">
-            <img
-              src={studentImage}
-              alt="Student Success"
-              className="w-full sm:max-w-[580px] md:max-w-[630px] rounded-xl object-cover object-center"
-              style={{
-                height: "auto",
-                width: "100%",
-                objectPosition: "center",
-              }}
-            />
+      <div className="max-w-7xl mx-auto px-4 py-28">
+        <div className="max-w-3xl space-y-8">
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/90 backdrop-blur-sm shadow-sm">
+            <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-slow-blink" />
+            <span className="text-sm font-medium text-gray-700">
+              Admissions Open for 2026
+            </span>
           </div>
 
-          {/* Text section */}
-          <div className="space-y-5 order-2 sm:order-1 xl:pr-40 text-black">
-            {/* Headline with animation */}
-            <h1
-              data-aos="fade-up"
-              className="text-5xl sm:text-5xl font-semibold"
-              style={{ lineHeight: 1.2 }}
-            >
-              {["Master", "Your", "Board", "Exams"].map((word, index) => (
-                <span
-                  key={index}
-                  className="inline-block opacity-0 animate-reveal font-ubuntu"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  {word}
-                  {index < 3 && "\u00A0"}
-                </span>
-              ))}
-              <h1
-                data-aos="fade-up"
-                className="text-6xl sm:text-6xl font-semibold font-ubuntu"
-              >
-                <span className="text-primary">
-                  {["with", "Artha"].map((word, index) => (
-                    <span
-                      key={index + 4}
-                      className="inline-block opacity-0 animate-reveal"
-                      style={{ animationDelay: `${(index + 4) * 0.2}s` }}
-                    >
-                      {word}
-                      {index < 1 && "\u00A0"}
-                    </span>
-                  ))}
-                </span>
-              </h1>
-            </h1>
+          {/* Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            Unlock Your <br />
+            <span className="text-primary">Academic Potential</span>
+          </h1>
 
-            {/* Subheadline */}
-            <p
-              data-aos="fade-up"
-              data-aos-delay="300"
-              className="subheadline font-lato font-base text-xl"
-            >
-              Expert guidance for PUC 11th & 12th | Science, Commerce & Humanities streams
-            </p>
+          {/* Sub text */}
+          <p className="text-lg md:text-xl text-white/80 italic max-w-2xl">
+            Expert coaching for PUC exams with personalized attention,
+            proven methodologies, and a proven track record of success.
+          </p>
 
-            {/* Button */}
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 pt-4">
             <button
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-offset="0"
-              className="primary-btn font-lato"
-              onClick={handleLearnMoreClick}
+              onClick={() => scrollToSection("courses")}
+              className="bg-primary text-white px-7 py-3 rounded-full font-semibold 
+              hover:opacity-90 transition"
             >
-              Explore Courses
+              Start Learning Today
+            </button>
+
+            <button
+              onClick={() => scrollToSection("courses")}
+              className="border-2 border-white text-white px-7 py-3 rounded-full font-semibold 
+              hover:bg-white hover:text-[#0D768C] transition"
+            >
+              View Courses
             </button>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Soft Glow */}
+      <div
+        className="absolute right-[-200px] top-1/2 -translate-y-1/2 
+        w-[520px] h-[520px] rounded-full pointer-events-none"
+        style={{
+          backgroundColor: "#FFFFFF",
+          opacity: 0.12,
+          filter: "blur(120px)",
+        }}
+      />
+    </section>
   );
 };
 

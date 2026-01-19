@@ -1,45 +1,37 @@
-import { FaDigitalOcean } from "react-icons/fa";
-import { TbDeviceImacSearch } from "react-icons/tb";
-import { RiAdminFill } from "react-icons/ri";
-import { VscCallOutgoing } from "react-icons/vsc";
-import yellowCar from "../../assets/website/5.png"; // You can remove this import if it's not needed.
+﻿import { FaChalkboardUser, FaTrophy, FaBook, FaHeadset } from "react-icons/fa6";
 
-const skillsData = [
+const aboutPoints = [
   {
-    name: "Digital Marketing Specialist",
-    icon: <FaDigitalOcean className="text-4xl text-primary" />,
-    link: "#",
+    name: "Expert Faculty",
+    icon: <FaChalkboardUser className="text-4xl text-primary" />,
     description:
-      "Responsible for planning and executing multi-channel marketing campaigns.",
+      "Experienced educators dedicated to student success with proven teaching methodologies.",
     aosDelay: "0",
   },
   {
-    name: "SEO Analyst",
-    icon: <TbDeviceImacSearch className="text-4xl text-primary" />,
-    link: "#",
+    name: "Proven Track Record",
+    icon: <FaTrophy className="text-4xl text-primary" />,
     description:
-      "Optimize websites to improve visibility and search engine rankings.",
+      "Consistently high pass rates and student achievements in board exams.",
     aosDelay: "300",
   },
   {
-    name: "Social Media Manager",
-    icon: <RiAdminFill className="text-4xl text-primary" />,
-    link: "#",
+    name: "Comprehensive Curriculum",
+    icon: <FaBook className="text-4xl text-primary" />,
     description:
-      "Create and manage content to drive engagement across social platforms.",
+      "Complete coverage of all subjects with focus on conceptual clarity.",
     aosDelay: "500",
   },
   {
-    name: "CTA Section",
-    icon: <VscCallOutgoing className="text-4xl text-primary" />,
-    link: "#",
+    name: "Student Support",
+    icon: <FaHeadset className="text-4xl text-primary" />,
     description:
-      "Don’t see a position that fits? Send us your resume at careers@garageadvertisements.com.",
+      "Personalized guidance and doubt clearing sessions available for all students.",
     aosDelay: "700",
   },
 ];
 
-const CareerService = () => {
+const AboutUs = () => {
   return (
     <>
       <span id="about"></span>
@@ -49,9 +41,9 @@ const CareerService = () => {
           <div className="pb-12 text-center space-y-3 mt-8">
             <h1
               data-aos="fade-up"
-              className="text-4xl font-semibold sm:text-4xl text-violet-950 uppercase"
+              className="text-4xl font-semibold sm:text-4xl text- uppercase"
             >
-      Why Choose Artha Tutorials
+              Why Choose Artha Tutorials
             </h1>
             <br />
             {/* Space between Heading and Points */}
@@ -112,16 +104,13 @@ const CareerService = () => {
               className="primary-btn"
               onClick={() => (window.location.href = "https://forms.gle/qrMgUkXB9g13JRbd8")}
             >
-              Apply Now
+              Enroll Now
             </button>
           </div>
-        </div> className="primary-btn">
-              Enroll
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default CareerService;
-
-
-
-
-
-
+export default AboutUs;
