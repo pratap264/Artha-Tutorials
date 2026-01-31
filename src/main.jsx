@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 // Add the base path here
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/artha-tutorials/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
