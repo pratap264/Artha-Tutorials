@@ -1,6 +1,7 @@
 import {
   FaInstagram,
-  FaLinkedin,
+  FaFacebook,
+  FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
@@ -21,16 +22,14 @@ const Footer = () => {
               Guiding PUC Students Towards Academic Excellence
             </p>
 
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Artha Tutorials is a trusted PUC coaching institute committed to
-              academic excellence, personal attention, and consistent results
-              for PUC 1 & 2 students.
+            <p className="text-gray-800 text-sm leading-relaxed">
+              Artha empowers commerce students with expert coaching for I & II PUC Commerce and CA Foundation building strong concepts, exam confidence, and a path to professional success.
             </p>
 
             {/* Social */}
             <div className="flex gap-4 pt-2">
               <a
-                href="#"
+                href="https://www.instagram.com/arthatutorials/"
                 className="p-3 rounded-full bg-primary/10 text-primary
       hover:bg-primary hover:text-white transition"
               >
@@ -38,11 +37,11 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.facebook.com/arthatutorials/"
                 className="p-3 rounded-full bg-primary/10 text-primary
       hover:bg-primary hover:text-white transition"
               >
-                <FaLinkedin />
+                <FaFacebook />
               </a>
             </div>
           </div>
@@ -90,17 +89,29 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-600 text-sm">
               <li className="flex items-start gap-3">
                 <FaPhoneAlt className="text-primary mt-1" />
-                <span>+91 9XXXXXXXXX</span>
+                <span>
+                  +91 80733 57057
+                  <br />
+                  +91 85533 66974
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <FaEnvelope className="text-primary mt-1" />
+                <a
+                  href="mailto:arthatutorials@gmail.com"
+                  className="hover:text-primary"
+                >
+                  arthatutorials@gmail.com
+                </a>
               </li>
 
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-primary mt-1" />
                 <span>
-                  4th Main Road, Malleshwaram
+                  #37(72), 4th Cross, Kodandaramapuram, Malleshwaram
                   <br />
-                  Pincode: 560003
-                  <br />
-                  Bengaluru, Karnataka, India
+                  Bangalore - 560003
                 </span>
               </li>
             </ul>
