@@ -10,10 +10,11 @@ import Home from "./pages/Home";
 const App = () => {
   useEffect(() => {
     AOS.init({
-      offset: 100,
-      duration: 800,
-      easing: "ease-in",
-      delay: 100,
+      offset: 80,
+      duration: 400,
+      easing: "ease-out",
+      delay: 0,
+      once: true,
     });
     AOS.refresh();
   }, []);

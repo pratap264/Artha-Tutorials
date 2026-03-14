@@ -8,29 +8,70 @@ const Reviews = () => {
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
   };
 const testimonialData = [
   {
     id: 1,
-    name: "Ramesh Kumar (Parent, PUC 2)",
-    text: "Artha Tutorials played a major role in my son’s academic improvement. The faculty are highly experienced and give individual attention to every student. We saw a clear improvement in confidence and results.",
+    name: "Nityashree R (98%) — State 10th Rank",
+    text: "Artha Tutorials has been more than just a tuition — they have guided us in times of need, built our confidence, and been tremendously supportive alongside preparing us to ace our exams. I have never felt stressed at all and have been able to do my best in my exams as well as University personal interviews. Thanks to Artha I have been able to secure the 10th rank for the state. Thank you, Artha for giving me another place to call 'home'.",
   },
   {
     id: 2,
-    name: "Sneha S (PUC 1 Student)",
-    text: "The teaching style at Artha Tutorials is very clear and easy to understand. Concepts in Accountancy and Economics became simple for me. Regular tests really helped me improve my performance.",
+    name: "Savitha Ramu — Parent of Greeshma Ramu (96.17%), State 21st Rank",
+    text: "A big applause and thank you to Rajesh sir, Akshay sir, and all the other teachers for their hard work and passion. With all of your constant support and guidance, my ward Greeshma Ramu has scored a distinction in the exam. I feel that my decision was right in sending my ward to Artha Tutorials. I wish for great success to Artha. Keep it up.",
   },
   {
     id: 3,
-    name: "Mahesh Rao (Parent, PUC 1)",
-    text: "What we liked most about Artha Tutorials is their disciplined approach and regular feedback to parents. Faculty members are approachable and truly care about student success.",
+    name: "Namana (97.50%) — Crash Course Student",
+    text: "Artha Tutorials is not your average commerce coaching center. The moment you step inside, you're greeted by educators who are genuinely invested in your academic growth. Here, I found the best teachers whom I can call my best friends. They create a space where students feel empowered to explore and learn and also ensure that each one of them feels valued and understood. In short, Artha is a home away from home :)",
   },
   {
     id: 4,
-    name: "Aditya K (PUC 2 Student)",
-    text: "Artha Tutorials helped me build strong fundamentals in Statistics and Business Studies. The revision sessions before exams were extremely useful. I feel much more confident now.",
+    name: "Vibha Gangamma (96%) — National Level Hockey Team",
+    text: "I could never imagine tutorials being more fun, creative, and inclusive. Artha's teachers focus on connecting with each individual and bringing out their shine, which distinguishes them from normal tutorials. They provide not only academic support but also guarantee fun-filled learning outside the world of books.",
+  },
+  {
+    id: 5,
+    name: "Purnima Raghu — Parent of Monitha (92.33%)",
+    text: "I'm very happy to send my daughter to Artha tutorials. The teachers are excellent and will pay individual attention to students and have a great atmosphere. I recommend Artha tutorials to students who want to join and excel in their studies. The teachers are very understanding and very reliable. Overall I'm happy with my daughter's performance.",
+  },
+  {
+    id: 6,
+    name: "Vanitha Sukesh — Parent of Smrithi (95%), Teacher at Good Shepherd",
+    text: "I thank you for your dedication to helping your students learn and grow. Your passion for teaching is truly inspiring. Your encouragement and support have helped my child build confidence in her abilities. I would highly recommend Artha Tutorials for coaching.",
+  },
+  {
+    id: 7,
+    name: "Purav (86%) — Crash Course Student",
+    text: "Artha has been more than just a tutorial to me. I've made friends who are family here at Artha. I couldn't ask for such good teachers who understand the students so well. Apart from academics, Artha has imparted certain lessons and morals in me which will last for a lifetime. Artha has helped me understand the key fact that 'knowledge is always greater than marks'.",
+  },
+  {
+    id: 8,
+    name: "Sudha P — Parent",
+    text: "Artha tutorials is an excellent coaching centre for commerce subjects. The faculty here provide excellent training paired with a friendly and jovial environment which promotes the Gen Z generation to regularly attend the classes and at the same time study on a regular basis. Very happy and proud that my daughter is associated with this institute.",
+  },
+  {
+    id: 9,
+    name: "Kusuma N — Parent",
+    text: "The teaching at Artha Tutorials is very good. The teachers explain concepts in a different and engaging way instead of only relying on textbook methods. My child was very weak in Statistics and Economics earlier, but I can see clear improvement now. Thank you to the teachers for their effort and support.",
+  },
+  {
+    id: 10,
+    name: "Nakul Muniswamy — Student",
+    text: "I've had a great experience studying at Artha Tutorials. The teaching is really good, and the methods used are very different from the usual boring textbook learning. Concepts are explained in a simple and engaging way, which makes it much easier to understand and remember. The environment is also very friendly and supportive — it honestly feels like a second home for students.",
+  },
+  {
+    id: 11,
+    name: "Keerthana — Student",
+    text: "You will find one of the best teachers here, they will explain the concepts in a very practical manner and you will have fun while learning too. ARTHA tutorials is not just about studying, you learn so much more things about life. Highly suggested to join this tutorials, had a very amazing time here. Thank you Artha!",
+  },
+  {
+    id: 12,
+    name: "Chinmayee G — Student",
+    text: "The best place for you to learn those subjects you struggle with, also for sure you'll see an increase in the marks drastically. More than satisfied with the teaching and worth the price paid. Staff is very friendly and approachable too.",
   },
 ];
 

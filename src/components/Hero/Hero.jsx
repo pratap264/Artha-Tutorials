@@ -1,4 +1,5 @@
 import React from "react";
+import heroBg from "../../assets/Artha-Tutorials.jpeg";
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -11,9 +12,22 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#0D768C]"
+      className="relative overflow-hidden min-h-[85vh] flex items-center"
     >
-      <div className="max-w-7xl mx-auto px-4 py-28">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0D768C]/90 via-[#0D768C]/75 to-[#0D768C]/50" />
+
+      {/* Bottom fade for smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/10 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 w-full">
         <div className="max-w-3xl space-y-8">
 
           {/* Badge */}
@@ -25,13 +39,13 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg">
             The Meaning Behind <br />
             <span className="text-primary">Your Success</span>
           </h1>
 
           {/* Sub text */}
-          <p className="text-lg md:text-xl text-white/80 italic max-w-2xl">
+          <p className="text-lg md:text-xl text-white/90 italic max-w-2xl drop-shadow-md">
            Artha empowers commerce students with expert coaching for I & II PUC Commerce and CA Foundation building strong concepts, exam confidence, and a path to professional success.
           </p>
 
@@ -40,7 +54,7 @@ const Hero = () => {
             <button
               onClick={() => scrollToSection("courses")}
               className="bg-primary text-white px-7 py-3 rounded-full font-semibold 
-              hover:opacity-90 transition"
+              hover:opacity-90 transition shadow-lg hover:shadow-xl"
             >
               Start Learning Today
             </button>
@@ -48,7 +62,7 @@ const Hero = () => {
             <button
               onClick={() => scrollToSection("courses")}
               className="border-2 border-white text-white px-7 py-3 rounded-full font-semibold 
-              hover:bg-white hover:text-[#0D768C] transition"
+              hover:bg-white hover:text-[#0D768C] transition shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               View Courses
             </button>
@@ -59,10 +73,10 @@ const Hero = () => {
       {/* Soft Glow */}
       <div
         className="absolute right-[-200px] top-1/2 -translate-y-1/2 
-        w-[520px] h-[520px] rounded-full pointer-events-none"
+        w-[520px] h-[520px] rounded-full pointer-events-none z-[1]"
         style={{
           backgroundColor: "#FFFFFF",
-          opacity: 0.12,
+          opacity: 0.08,
           filter: "blur(120px)",
         }}
       />

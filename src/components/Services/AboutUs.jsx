@@ -1,32 +1,33 @@
-﻿import { FaChalkboardUser, FaTrophy, FaBook, FaHeadset } from "react-icons/fa6";
+import { FaChalkboardUser, FaTrophy, FaBook, FaHeadset } from "react-icons/fa6";
+import brochurePdf from "../../assets/ARTHA-BROCHURE.pdf";
 
 const aboutPoints = [
   {
-    name: "Expert Faculty",
+    name: "Conceptual Depth",
     icon: <FaChalkboardUser className="text-4xl text-primary" />,
     description:
-      "Experienced educators dedicated to student success with proven teaching methodologies.",
+      "Our teaching philosophy blends conceptual depth with strategic preparation, helping students build strong academic foundations.",
     aosDelay: "0",
   },
   {
-    name: "Proven Track Record",
+    name: "Exam Mastery",
     icon: <FaTrophy className="text-4xl text-primary" />,
     description:
-      "Consistently high pass rates and student achievements in board exams.",
+      "We enable students to approach board examinations with clarity and confidence through targeted exam strategies.",
     aosDelay: "300",
   },
   {
-    name: "Comprehensive Curriculum",
+    name: "Continuous Mentorship",
     icon: <FaBook className="text-4xl text-primary" />,
     description:
-      "Complete coverage of all subjects with focus on conceptual clarity.",
+      "The right guidance at the right time can transform a student's academic journey — and that's exactly what we provide.",
     aosDelay: "500",
   },
   {
-    name: "Student Support",
+    name: "Future-Ready Students",
     icon: <FaHeadset className="text-4xl text-primary" />,
     description:
-      "Personalized guidance and doubt clearing sessions available for all students.",
+      "We nurture discipline, curiosity, and excellence — shaping students not only for board results but for future success in commerce and professional careers.",
     aosDelay: "700",
   },
 ];
@@ -43,7 +44,7 @@ const AboutUs = () => {
               data-aos="fade-up"
               className="text-4xl font-semibold sm:text-4xl text- uppercase"
             >
-              Why Choose Artha Tutorials
+              Why Choose ARTHA Academy
             </h1>
             <br />
             {/* Space between Heading and Points */}
@@ -55,21 +56,21 @@ const AboutUs = () => {
                   className="flex items-center space-x-4 text-center hover:text-primary transition-all duration-300"
                 >
                   <span className="w-3 h-3 rounded-full bg-primary"></span>
-                  <span>Personalized learning approach</span>
+                  <span>Premium commerce learning space for 1st & 2nd PUC</span>
                 </li>
                 <li
                   data-aos="fade-up"
                   className="flex items-center space-x-4 text-center hover:text-primary transition-all duration-300"
                 >
                   <span className="w-3 h-3 rounded-full bg-primary"></span>
-                  <span>Regular practice tests and assessments</span>
+                  <span>Strategic preparation & conceptual clarity</span>
                 </li>
                 <li
                   data-aos="fade-up"
                   className="flex items-center space-x-4 text-center hover:text-primary transition-all duration-300"
                 >
                   <span className="w-3 h-3 rounded-full bg-primary"></span>
-                  <span>Affordable and flexible coaching plans</span>
+                  <span>Committed to nurturing discipline, curiosity & excellence</span>
                 </li>
               </ul>
             </div>
@@ -100,12 +101,13 @@ const AboutUs = () => {
             data-aos-offset="0"
             className="text-center mt-4 sm:mt-8"
           >
-            <button
-              className="primary-btn"
-              onClick={() => (window.location.href = "https://forms.gle/qrMgUkXB9g13JRbd8")}
+            <a
+              href={brochurePdf}
+              download
+              className="primary-btn inline-block"
             >
-              Enroll Now
-            </button>
+              Download Brochure
+            </a>
           </div>
         </div>
       </div>

@@ -1,14 +1,13 @@
 //Home.js - Single Page with Anchor Navigation
 import React from "react";
 import Hero from "../components/Hero/Hero";
-import BrandsLogo from "../components/BrandsLogo/BrandsLogo";
 import Courses from "../components/Services/Courses";
 import Reviews from "../components/Reviews/Reviews";
-import WorkComp from "../components/Work/WorkComp";
 import Faculty from "../components/OurTeam/Faculty";
 import Form from "../components/Form/Form";
 import AboutUs from "../components/Services/AboutUs";
 import MapSection from "../components/Services/MapSection";
+import Gallery from "../components/Gallery/Gallery";
 
 const Home = () => {
   return (
@@ -33,6 +32,10 @@ const Home = () => {
         <Reviews />
       </section>
 
+      <section id="gallery">
+        <Gallery />
+      </section>
+
       <section id="contact">
         <Form />
       </section>
@@ -40,10 +43,6 @@ const Home = () => {
       <section id="location">
         <MapSection />
       </section>
-
-      {/* Uncomment below if needed */}
-      {/* <section id="brands"><BrandsLogo /></section> */}
-      {/* <section id="work"><WorkComp /></section> */}
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import brochurePdf from "../../assets/ARTHA-BROCHURE.pdf";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -118,7 +119,7 @@ const EnquiryForm = () => {
         {/* Brochure */}
         <div className="mt-20">
           <a
-            href="/brochure.pdf"
+            href={brochurePdf}
             download
             className="
               inline-block w-full md:w-auto
