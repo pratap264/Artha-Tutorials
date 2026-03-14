@@ -26,14 +26,13 @@ const Hero = () => {
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-            Unlock Your <br />
-            <span className="text-primary">Academic Potential</span>
+            The Meaning Behind <br />
+            <span className="text-primary">Your Success</span>
           </h1>
 
           {/* Sub text */}
           <p className="text-lg md:text-xl text-white/80 italic max-w-2xl">
-            Expert coaching for PUC exams with personalized attention,
-            proven methodologies, and a proven track record of success.
+           Artha empowers commerce students with expert coaching for I & II PUC Commerce and CA Foundation building strong concepts, exam confidence, and a path to professional success.
           </p>
 
           {/* Buttons */}
