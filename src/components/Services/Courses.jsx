@@ -1,4 +1,5 @@
 import { FaGraduationCap } from "react-icons/fa";
+import brochurePdf from "../../assets/ARTHA-BROCHURE.pdf";
 
 const pucSubjects = [
   "Accountancy",
@@ -25,12 +26,8 @@ const coursesData = [
 
 const Courses = () => {
   return (
-    <section
-      id="courses"
-      className="bg-artha py-20 font-lato scroll-mt-24"
-    >
+    <section id="courses" className="bg-artha py-20 font-lato scroll-mt-24">
       <div className="container mx-auto px-4">
-
         {/* Header */}
         <div className="text-center space-y-4 mb-14">
           <h1
@@ -68,9 +65,7 @@ const Courses = () => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-600">
-                {course.description}
-              </p>
+              <p className="text-gray-600">{course.description}</p>
 
               {/* Subjects */}
               <div>
@@ -100,11 +95,15 @@ const Courses = () => {
           data-aos-delay="200"
           className="text-center mt-16"
         >
-          <button className="primary-btn">
-            View Detailed Curriculum
-          </button>
+          <a
+            href={brochurePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-btn inline-block"
+          >
+            DOWNLOAD BROCHURE
+          </a>
         </div>
-
       </div>
     </section>
   );

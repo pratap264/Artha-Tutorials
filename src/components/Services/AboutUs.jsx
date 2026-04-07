@@ -1,5 +1,4 @@
 import { FaChalkboardUser, FaTrophy, FaBook, FaHeadset } from "react-icons/fa6";
-import brochurePdf from "../../assets/ARTHA-BROCHURE.pdf";
 
 const aboutPoints = [
   {
@@ -94,21 +93,6 @@ const AboutUs = () => {
             ))}
           </div>
 
-          {/* Button */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="900"
-            data-aos-offset="0"
-            className="text-center mt-4 sm:mt-8"
-          >
-            <a
-              href={brochurePdf}
-              download
-              className="primary-btn inline-block"
-            >
-              Download Brochure
-            </a>
-          </div>
         </div>
       </div>
     </>
