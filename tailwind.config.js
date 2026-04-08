@@ -5,12 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        anton: ["Anton", "sans-serif"], // Anton font
-        space: ["Space Grotesk", "sans-serif"], // Add Space Grotesk
-        archivo: ["Archivo Black", "sans-serif"], // Add Archivo Black
-        ubuntu: ["Ubuntu", "sans-serif"], // Ubuntu font
-        rosarivo: ["Rosarivo", "cursive"], // Ubuntu font
-        lato: ["Lato", "sans-serif"], // Anton font
+        ubuntu: ["Ubuntu", "sans-serif"],
+        rosarivo: ["Rosarivo", "cursive"],
+        lato: ["Lato", "sans-serif"],
       },
       colors: {
         primary: "#E58729", // Faded orange to match the new logo
