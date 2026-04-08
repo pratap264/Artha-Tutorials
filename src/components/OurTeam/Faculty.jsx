@@ -1,14 +1,14 @@
 const facultyData = [
   {
     name: "Mr Rajesh M (PhD), M.Com",
-    title: "Founder, ARTHA TUTORIALS",
+    title: "Founder, ARTHA",
     role: "Faculty of Commerce, Specialised in Accounts & Economics",
     experience: "5+ years of experience in Accounting, Tax and Audit",
     aosDelay: "0",
   },
   {
     name: "Mr Akshay Krishna P B, B.Com",
-    title: "Founder, ARTHA TUTORIALS",
+    title: "Founder, ARTHA",
     role: "Faculty of Commerce, Specialised in Statistics",
     experience: "5+ years of industry experience in Accounting and ERP Implementation",
     aosDelay: "100",

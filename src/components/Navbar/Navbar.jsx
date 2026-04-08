@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
-import DarkLogo from "../../assets/logo/artha.jpg";
+import DarkLogo from "../../assets/logo/artha-logo.jpg";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header
-    id="top"
+      id="top"
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-white"
       }`}
@@ -35,7 +35,11 @@ const Navbar = () => {
         {/* Logo */}
         <button className="flex items-center">
           <div className="h-16 md:h-20 flex items-center">
-            <img src={DarkLogo} alt="Logo" className="h-full w-auto object-contain" />
+            <img
+              src={DarkLogo}
+              alt="Logo"
+              className="h-full w-auto object-contain"
+            />
           </div>
         </button>
 
@@ -88,13 +92,22 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col gap-8 mt-28 px-6 text-xl font-semibold">
-          <button onClick={() => scrollToSection("courses")} className="text-left hover:text-primary">
+          <button
+            onClick={() => scrollToSection("courses")}
+            className="text-left hover:text-primary"
+          >
             Courses
           </button>
-          <button onClick={() => scrollToSection("about")} className="text-left hover:text-primary">
+          <button
+            onClick={() => scrollToSection("about")}
+            className="text-left hover:text-primary"
+          >
             About Us
           </button>
-          <button onClick={() => scrollToSection("reviews")} className="text-left hover:text-primary">
+          <button
+            onClick={() => scrollToSection("reviews")}
+            className="text-left hover:text-primary"
+          >
             Reviews
           </button>
 

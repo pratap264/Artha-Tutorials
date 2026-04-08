@@ -136,10 +136,8 @@ const EnquiryForm = () => {
           />
 
           {/* Subject / Course */}
-          <input
-            type="text"
+          <select
             name="subject"
-            placeholder="Subject / Course Interested"
             value={formData.subject}
             onChange={handleChange}
             required
@@ -147,7 +145,11 @@ const EnquiryForm = () => {
               w-full border border-gray-800 px-6 py-4
               focus:outline-none focus:border-primary
             "
-          />
+          >
+            <option value="" disabled>Select Subject / Course Interested</option>
+            <option value="I PUC">I PUC</option>
+            <option value="II PUC">II PUC</option>
+          </select>
 
           {success && (
             <div className="text-green-600 font-semibold text-left mb-2">

@@ -5,7 +5,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import logo from "../../assets/logo/artha.jpg";
+import logo from "../../assets/logo/artha-logo.jpg";
 
 const Footer = () => {
   return (
@@ -15,15 +15,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="space-y-3">
-            <img src={logo} alt="Artha Tutorials" className="w-40" />
+            <img src={logo} alt="Artha Academy" className="w-40" />
 
             {/* Tagline */}
             <p className="text-bold text-gray-500 font-medium">
-              Guiding PUC Students Towards Academic Excellence
+              Guiding Students Towards Academic Excellence
             </p>
 
             <p className="text-gray-800 text-sm leading-relaxed">
-              Artha empowers commerce students with expert coaching for I & II PUC Commerce and CA Foundation building strong concepts, exam confidence, and a path to professional success.
+              Artha empowers commerce students with expert coaching for I & II
+              PUC Commerce and CA Foundation building strong concepts, exam
+              confidence, and a path to professional success.
             </p>
 
             {/* Social */}

@@ -1,5 +1,5 @@
 import React from "react";
-import heroBg from "../../assets/Artha-Tutorials.jpeg";
+import heroBg from "../../assets/Artha-Academy.jpeg";
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -21,7 +21,7 @@ const Hero = () => {
       />
 
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0D768C]/90 via-[#0D768C]/75 to-[#0D768C]/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0D768C]/70 via-[#0D768C]/50 to-[#0D768C]/30" />
 
       {/* Bottom fade for smooth transition to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/10 to-transparent" />
@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/90 backdrop-blur-sm shadow-sm">
             <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-slow-blink" />
             <span className="text-sm font-medium text-gray-700">
-              Admissions Open for 2026
+              Admissions Open for {new Date().getFullYear()}
             </span>
           </div>
 

@@ -15,12 +15,14 @@ const coursesData = [
     description:
       "Strong foundation building with focus on concepts, fundamentals, and exam-oriented preparation.",
     aosDelay: "0",
+    aosType: "fade-right",
   },
   {
     name: "PUC 2 (12th Standard)",
     description:
       "Advanced learning with in-depth subject mastery, revision strategies, and board exam readiness.",
     aosDelay: "200",
+    aosType: "fade-left",
   },
 ];
 
@@ -52,7 +54,7 @@ const Courses = () => {
           {coursesData.map((course) => (
             <div
               key={course.name}
-              data-aos="fade-up"
+              data-aos={course.aosType || "fade-up"}
               data-aos-delay={course.aosDelay}
               className="bg-white rounded-2xl p-8 shadow-lg space-y-5"
             >
